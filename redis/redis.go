@@ -50,10 +50,13 @@ func GetUsers() *[]objects.User{
 		
 		users = append(users, objects.User{Name: strip[0], Email: strip[2], Phone: strip[1]})
 	}
-	fmt.Println(users)
+	//fmt.Println(users)
 	return &users
 }
 
-func CreateNewUser() {
-
+func CreateNewUser(user objects.User) {
+	obj := fmt.Sprintf("%v",user)
+	if err := client.HSet(ctx, "users", user.Name, obj).Err(); err != nil {
+		panic(err)
+	}
 }

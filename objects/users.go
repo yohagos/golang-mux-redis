@@ -2,7 +2,6 @@ package objects
 
 import (
 	"errors"
-	"log"
 )
 
 type User struct {
@@ -36,7 +35,6 @@ func UserInit() {
 func GetUser(searchAfter string) (User, error){
 	for _, v := range AllUsers {
 		if v.Name == searchAfter {
-			log.Println(v)
 			return v, nil
 		}
 	}

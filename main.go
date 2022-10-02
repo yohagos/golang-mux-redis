@@ -13,8 +13,6 @@ func main() {
 
 	redis.RedisInit()
 
-	redis.GetUsers()
-
 	mux.LoadTemplates("dynamicTemplates/*.html")
 	mux := mux.NewRouter()
 	

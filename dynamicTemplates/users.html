@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Users</title>
+</head>
+<body>
+    <a href="/">Back</a><br>
+    <a href="/addUser">New User</a>
+    <br><hr><br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        {{ range .Users }}
+        <tr>
+            <th>{{ .Name }}</th>
+            <th>{{ .Email }}</th>
+            <th>{{ .Phone }}</th>
+        </tr>
+        {{ end }}
+    </table>
+</body>
+</html>

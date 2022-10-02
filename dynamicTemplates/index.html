@@ -6,42 +6,12 @@
 <body>
     <div>
         <label>GET Function</label>
-        <br>
-        <form action="/users" method="get">
-            <button type="submit">GET Users</button>
-        </form>
-        {{ if .Display }}
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-            </tr>
-            {{ range .Users }}
-            <tr>
-                <th>{{ .GetUserName }}</th>
-                <th>{{ .GetUserEmail }}</th>
-                <th>{{ .GetUserPhone }}</th>
-            </tr>
-            {{ end }}
-        </table>
-            
-        {{ end }}
+        <a href="/users">HERE</a>
     </div>
     <br><hr><br>
     <div>
-        <label for="form">POST Function</label><br>
-        <form id="form" enctype="multipart/form-data" method="post">
-            <label for="fname">First name:</label><br>
-            <input type="text" name="name" id="fname" placeholder="Name"><br>
-
-            <label for="femail">Email:</label><br>
-            <input type="email" name="email" id="femail" placeholder="Email"><br>
-
-            <label for="fphone">Phone:</label><br>
-            <input type="tel" name="phone" id="fphone" placeholder="Phone"><br>
-            <button type="submit">POST Users</button>
-        </form>
+        <label for="form">POST Function</label>
+        <a href="/addUser">HERE</a>
     </div>
 </body>
 </html>
