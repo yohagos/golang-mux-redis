@@ -42,3 +42,15 @@ func GetUser(searchAfter string) (User, error){
 	}
 	return User{}, errors.New("not found")
 }
+
+func (u *User) GetUerName() string {
+	return u.Name
+}
+
+func (u *User) GetUserEmail() string {
+	return u.Email
+}
+
+func (u *User) GetUserPhone() string {
+	return u.Phone
+}
